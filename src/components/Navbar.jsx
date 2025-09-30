@@ -1,37 +1,45 @@
 export default function Navbar() {
   return (
-    <nav className="bg-indigo-900 text-white px-8 py-4 shadow-md">
-      <div className="flex justify-between items-center max-w-6xl mx-auto w-full">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-900 shadow-md">
+      <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
-        <a
-          href="/"
-          className="text-3xl font-heading font-extrabold tracking-tight bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent"
-        >
-          Michael.dev
+        <a href="#home" className="text-2xl font-bold">
+          <span className="text-indigo-400">Michael</span>
+          <span className="text-gray-200">.dev</span>
         </a>
 
-        {/* Links */}
-        <div className="flex gap-8 font-heading text-lg uppercase tracking-wide items-center">
-          <a href="#about" className="relative group">
-            About
-            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
+        {/* Nav Links */}
+        <nav className="flex gap-8 text-white font-medium">
+          {/* About with underline on hover */}
+          <a
+            href="#about"
+            className="relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] 
+                       after:bg-indigo-400 after:transition-all after:duration-300 
+                       hover:after:w-full hover:text-indigo-300"
+          >
+            ABOUT
           </a>
 
-          {/* Highlighted Projects */}
+          {/* Projects with pill highlight */}
           <a
             href="#projects"
-            className="px-4 py-1.5 rounded-full bg-teal-400 text-indigo-900 font-semibold shadow-sm 
-             hover:bg-teal-300 hover:shadow-[0_0_12px_rgba(45,212,191,0.6)] transition"
+            className="px-4 py-1 rounded-full bg-indigo-500 text-white font-semibold shadow-lg
+                       hover:bg-indigo-400 transition"
           >
-            Projects
+            PROJECTS
           </a>
 
-          <a href="#contact" className="relative group">
-            Contact
-            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
+          {/* Contact with underline on hover */}
+          <a
+            href="#contact"
+            className="relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] 
+                       after:bg-indigo-400 after:transition-all after:duration-300 
+                       hover:after:w-full hover:text-indigo-300"
+          >
+            CONTACT
           </a>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
