@@ -11,9 +11,11 @@ import { FiChevronDown } from "react-icons/fi";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col min-h-screen items-center justify-center 
-                        bg-gradient-to-r from-gray-900 via-indigo-900 to-black 
-                        bg-[length:200%_200%] animate-gradientShift pt-24 pb-16 overflow-hidden">
+    <section
+      className="relative flex flex-col min-h-screen items-center justify-center 
+                 bg-gradient-to-r from-gray-900 via-indigo-900 to-black 
+                 bg-[length:200%_200%] animate-gradientShift pt-24 pb-16 overflow-hidden"
+    >
       {/* Card */}
       <div className="bg-white rounded-2xl p-12 text-center text-gray-900 shadow-2xl border border-gray-200 max-w-5xl w-full mx-4 relative z-10">
         <h1 className="text-5xl font-extrabold">
@@ -26,9 +28,9 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="mt-8 flex gap-4 justify-center flex-wrap">
-          {/* Resume Button (pulse glow) */}
           <a
-            href="#resume"
+            href="/resume.pdf"
+            download
             className="px-6 py-3 bg-indigo-900 text-white font-medium rounded-lg 
                        shadow-[0_0_15px_4px_rgba(79,70,229,0.6)] 
                        animate-[pulseGlow_2s_ease-in-out_infinite] 
@@ -38,8 +40,6 @@ export default function Hero() {
           >
             Download Resume
           </a>
-
-          {/* GitHub & LinkedIn (subtle hover) */}
           <a
             href="https://github.com/urenami"
             target="_blank"
@@ -50,7 +50,7 @@ export default function Hero() {
             View GitHub
           </a>
           <a
-            href="https://linkedin.com/in/urenami"
+            href="https://www.linkedin.com/in/michael-u-a8b67957/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 border border-indigo-900 text-indigo-900 font-medium rounded-lg 
@@ -82,9 +82,11 @@ export default function Hero() {
               <div
                 key={index}
                 style={{ animationDelay: `${index * 0.15}s` }}
-                className="flex flex-col items-center opacity-0 translate-y-4 animate-fadeUp"
+                className="flex flex-col items-center opacity-0 translate-y-4 animate-fadeUp 
+                           transition-transform duration-300 hover:scale-110"
               >
-                <div className="p-4 rounded-full bg-gray-100 shadow-md flex items-center justify-center">
+                <div className="p-4 rounded-full bg-gray-100 shadow-md flex items-center justify-center 
+                                transition duration-300 hover:shadow-[0_0_20px_rgba(79,70,229,0.6)]">
                   {tech.icon}
                 </div>
                 <span className="mt-2 text-sm font-medium">{tech.name}</span>
@@ -94,7 +96,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Gradient Fade (bottom transition) */}
+      {/* Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-gray-900 z-0"></div>
 
       {/* Arrow */}

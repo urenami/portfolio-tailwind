@@ -3,9 +3,9 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-900 shadow-md">
       <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
-        <a href="#home" className="text-2xl font-bold">
+        <a href="#home" className="text-3xl font-extrabold tracking-tight">
           <span className="text-indigo-400">Michael</span>
-          <span className="text-gray-200">.dev</span>
+          <span className="text-white">.dev</span>
         </a>
 
         {/* Nav Links */}
